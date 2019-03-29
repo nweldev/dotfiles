@@ -1,0 +1,39 @@
+[submodule "zsh/.oh-my-zsh"]
+	path = zsh/.oh-my-zsh
+	url = git@github.com:nweldev/ohmyzsh.git
+[submodule "zsh/.zshrc.d/spaceship-angular-prompt"]
+	path = zsh/.zshrc.d/spaceship-angular-prompt
+	url = git@gist.github.com:600f69b7bc8464ca67005a35eb0f7bb3.git
+[submodule "zsh/.zsh-custom/themes/spaceship-prompt"]
+	path = zsh/.zsh-custom/themes/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
+[submodule "zsh/.zsh-custom/plugins/zsh-autosuggestions"]
+	path = zsh/.zsh-custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "aur/all-repository-fonts"]
+	path = aur/all-repository-fonts
+	url = https://aur.archlinux.org/all-repository-fonts.git
+[submodule "aur/nvm"]
+	path = aur/nvm
+	url = https://aur.archlinux.org/nvm.git
+[submodule "aur/hyper"]
+	path = aur/hyper
+	url = git@github.com:nweldev/aur-hyper.git
+[submodule "awesome/.config/awesome/copycats"]
+	path = awesome/.config/awesome/copycats
+	url = git@github.com:nweldev/awesome-copycats.git
+[submodule "awesome/.config/awesome/lain"]
+	path = awesome/.config/awesome/lain
+	url = git@github.com:lcpz/lain.git
+[submodule "awesome/.config/awesome/freedesktop"]
+	path = awesome/.config/awesome/freedesktop
+	url = git@github.com:lcpz/awesome-freedesktop.git
+[submodule "awesome/.config/awesome/jsonlua"]
+	path = awesome/.config/awesome/jsonlua
+	url = git@github.com:rxi/json.lua.git
+[submodule "nvm/.nvm"]
+	path = nvm/.nvm
+	url = git@github.com:nvm-sh/nvm.git
+[submodule "vim/.config/nvim"]
+	path = vim/.config/nvim
+	url = https://github.com/NvChad/NvChad
