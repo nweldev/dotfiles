@@ -10,12 +10,6 @@
 [submodule "zsh/.zsh-custom/plugins/zsh-autosuggestions"]
 	path = zsh/.zsh-custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "aur/all-repository-fonts"]
-	path = aur/all-repository-fonts
-	url = https://aur.archlinux.org/all-repository-fonts.git
-[submodule "aur/nvm"]
-	path = aur/nvm
-	url = https://aur.archlinux.org/nvm.git
 [submodule "awesome/.config/awesome/copycats"]
 	path = awesome/.config/awesome/copycats
 	url = git@github.com:nweldev/awesome-copycats.git
