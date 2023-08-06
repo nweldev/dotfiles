@@ -36,9 +36,7 @@ cat code-extensions.list | xargs -L 1 echo code --install-extension
 
 ## system config
 
-sudo ln -sf $PWD/etc/fonts/conf.avail/75-noto-color-emoji.conf /etc/fonts/conf.d/
 sudo ln -sf $PWD/etc/X11/xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/
-sudo ln -sf $PWD/etc/X11/xorg.conf.d/20-intel.conf /etc/X11/xorg.conf.d/
 sudo ln -sf $PWD/etc/locale.conf /etc/
 sudo ln -sf $PWD/etc/lightdm/lightdm.conf /etc/lightdm
 
