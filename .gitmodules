@@ -16,9 +16,6 @@
 [submodule "aur/nvm"]
 	path = aur/nvm
 	url = https://aur.archlinux.org/nvm.git
-[submodule "aur/hyper"]
-	path = aur/hyper
-	url = git@github.com:nweldev/aur-hyper.git
 [submodule "awesome/.config/awesome/copycats"]
 	path = awesome/.config/awesome/copycats
 	url = git@github.com:nweldev/awesome-copycats.git

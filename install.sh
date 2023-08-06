@@ -13,8 +13,6 @@ sudo pacman -S xclip hub openssh vim sudo stow zsh autojump physlock
 sudo pacman -S wpa_supplicant dialog iw elinks
 # Fonts
 sudo pacman -S powerline-fonts otf-fira-code noto-fonts-emoji
-# HyperJS
-sudo pacman -S libicns graphicsmagick xz yarn
 # Sound
 sudo pacman -S alsa-utils playerctl
 # LightDM 
@@ -27,9 +25,6 @@ stow nvm
 cd nvm
 . nvm.sh
 cd ..
-
-# don't install yarn with pacman as it would install nodejs
-sudo pacman -S yarn hyper --assume-installed nodejs=12.3.0
 
 # install vs code extensions
 cat code-extensions.list | xargs -L 1 echo code --install-extension
@@ -56,7 +51,6 @@ sudo systemctl enable lightdm.service
 
 stow awesome
 stow git
-stow hyper.js
 stow vsconf
 stow zsh
 stow arandr

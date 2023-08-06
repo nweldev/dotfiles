@@ -34,14 +34,6 @@ For more details see [install.sh](./install.sh). _Don't use this script directly
 
 ## Tools
 
-### Hyper.js
-
-A terminal built on web technologies
-
-| :octocat: repo | :globe_with_meridians: website | :arrow_down: install |
-|----------------|---------------------------------|------------------------|
-| [zeit/hyper](https://github.com/zeit/hyper)| [hyper.is](https://hyper.is/) | forked [AUR](./aur) |
-
 ### VS Code
 
 Code editing.\
