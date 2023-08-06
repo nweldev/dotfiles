@@ -47,7 +47,7 @@ sudo systemctl enable netctl-auto@interface.service
 sudo systemctl enable lightdm.service
 
 ## link user dotfiles
-# this project should be clones in $HOME/dotfiles
+# this project should be cloned in $HOME/dotfiles
 
 stow awesome
 stow git
