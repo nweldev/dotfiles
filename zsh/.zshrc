@@ -16,6 +16,9 @@ export ZSH_CUSTOM="$HOME/.zsh-custom"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
 
+# See https://github.com/spaceship-prompt/spaceship-prompt/issues/1356
+SPACESHIP_PROMPT_ASYNC=false
+
 # Golang env
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
