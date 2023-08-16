@@ -176,12 +176,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias gdtl="git difftool"
-
-zhelp() {
-  cat $HOME/.oh-my-zsh/plugins/$1/$1.plugin.zsh | grep ${@:2}
-}
-
 [ -s "/etc/profile.d/autojump.zsh" ] && source /etc/profile.d/autojump.zsh
 
 # .zshrc.d
@@ -249,30 +243,55 @@ alias dnode="$DEBUG_NODE"
 alias dngg="$DEBUG_NODE $(where ng)"
 alias dng="$DEBUG_NODE ./node_modules/@angular/cli/bin/ng"
 
-# Aliases
+# Aliases and cli functions
+
+## Apps
 
 alias chrome="google-chrome-stable"
-alias xx="asciinema play"
 alias netflix="chrome --app=https://www.netflix.com/"
+
+## Npm
+
 alias npmp="npx install-peerdeps"
+alias npmI="npm install --package-lock-only --ignore-scripts"
+
+## Shortcuts
+
+### find the command associated with an omz alias
+zhelp() {
+  cat $HOME/.oh-my-zsh/plugins/$1/$1.plugin.zsh | grep ${@:2}
+}
+
+alias xx="asciinema play"
 alias sub="subliminal download -l fr"
+
 alias imhome="bluetoothctl -- power on && bash $HOME/.screenlayout/home-office.sh && xbacklight = 0"
+
 alias obscam="sudo modprobe v4l2loopback devices=1 video_nr=10 card_label=\"OBS Cam\" exclusive_caps=1 \
     && sudo modprobe snd-aloop index=10 id=\"OBS Mic\" \
     && pacmd 'update-source-proplist alsa_input.platform-snd_aloop.0.analog-stereo device.description=\"OBS Mic\" ' \
     && ffmpeg -probesize 32 -analyzeduration 0 -listen 1 -i rtmp://127.0.0.1:1935/live/test -map 0:1 -f v4l2 -vcodec rawvideo /dev/video10 -map 0:0 -f alsa hw:10,1"
+
 alias fanq="sudo smbios-thermal-ctl --set-thermal-mode=Balanced"
 alias fanp="sudo smbios-thermal-ctl --set-thermal-mode=Performance"
+
 alias hibernate="systemctl hibernate"
 alias suspend="systemctl suspend"
 alias logout="sudo systemctl restart lightdm"
-alias gpt="git push --follow-tags"
-alias npmI="npm install --package-lock-only --ignore-scripts"
+
 alias stayup="xset s off -dpms"
+
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+
+## Git
+
+alias gpt="git push --follow-tags"
+alias gdtl="git difftool"
+
+# Perl
 
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
