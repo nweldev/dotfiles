@@ -296,6 +296,9 @@ alias grbpx="grbp --interactive --autosquash"
 ### rebase and reset author while preserving committer date
 alias grbra="git -c rebase.instructionFormat='%s%nexec GIT_COMMITTER_DATE=\"%cD\" GIT_AUTHOR_DATE=\"%aD\" git commit --amend --no-edit --reset-author' rebase"
 
+### omz overrides
+alias gfo='git fetch origin --prune'
+
 # Perl
 
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
