@@ -1,8 +1,30 @@
 [user]
-# Please adapt and uncomment the following lines:
   name = Nwel
   email = nweldev@users.noreply.github.com
-    
+
+# Additionnal profiles for specific directories
+
+[includeIf "gitdir:~/git/pro/"]
+  ## The following file should look something like this:
+  #
+  # [user]
+  # email = <github-account>@users.noreply.github.com
+  # name = "<Pseudo>"
+  # 
+  # [github]
+  # user = "<github-account>"
+  #
+  # [core]
+  # sshCommand = "ssh -i ~/.ssh/id_<id>"
+  
+  path = ~/git/pro/.gitconfig.pro
+
+  ## Don't forget to also add the ssh key to .ssh/config:
+  #
+  # Host <id>-github 
+  # HostName github.com
+  # IdentityFile ~/.ssh/id_<id>
+
 [log]
   date = iso
 
