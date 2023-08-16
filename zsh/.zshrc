@@ -111,12 +111,14 @@ export NVM_DIR="$(realpath $HOME/.nvm)"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
+zstyle :omz:plugins:ssh-agent identities id_rsa id_pro
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  ssh-agent
   git
   gcloud
   docker
@@ -238,30 +240,6 @@ SPACESHIP_PROMPT_ORDER=(
 
 export EDITOR="code --wait"
 export GIT_EDITOR="code --wait"
-
-# SSH Agent
-
-SSH_ENV=$HOME/.ssh/environment
-
-# start the ssh-agent
-function start_agent {
-    echo "Initializing new SSH agent..."
-    # spawn ssh-agent
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add
-}
-		      
-if [ -f "${SSH_ENV}" ]; then
-	. "${SSH_ENV}" > /dev/null
-	ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-	    start_agent;
-	}
-else
-	start_agent;
-fi
 
 # Debug Nodejs
 
