@@ -288,6 +288,14 @@ function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 alias gpt="git push --follow-tags"
 alias gdtl="git difftool"
 
+### rebase but preserve committer date
+alias grbp="git -c rebase.instructionFormat='%s%nexec GIT_COMMITTER_DATE=\"%cD\" git commit --amend --no-edit' rebase"
+alias grbpi="grbp --interactive"
+alias grbpx="grbp --interactive --autosquash"
+
+### rebase and reset author while preserving committer date
+alias grbra="git -c rebase.instructionFormat='%s%nexec GIT_COMMITTER_DATE=\"%cD\" GIT_AUTHOR_DATE=\"%aD\" git commit --amend --no-edit --reset-author' rebase"
+
 # Perl
 
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
