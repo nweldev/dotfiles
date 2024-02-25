@@ -12,7 +12,7 @@
   },
   "theme": "powerarrow-dark",
   "tags": {
-    "base": ["🔍", "💻", "{}", "📖", "💬"]
+    "base": ["🔍", "💻", "{}", "📺", "💬"]
   },
   "menu": {
     "mouseOnly": false

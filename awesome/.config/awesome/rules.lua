@@ -30,6 +30,7 @@ return {
   -- map clients to tag
   {
     rule_any = {class = {"firefox", "Google-chrome"} },
+    except_any = { { role = "pop-up" }},
     properties = { tag = "🔍"}
   },
   {
@@ -38,7 +39,7 @@ return {
   },
   {
     rule_any = {class = {"ghostwriter"} },
-    properties = { tag = "📖"}
+    properties = { tag = "{}"}
   },
   {
     rule_any = {class = {"Terminator", "Hyper"} },
@@ -50,7 +51,21 @@ return {
   },
   {
     rule_any = {class = { "Zotero"} },
-    properties = { tag = "📖"}
+    properties = { tag = "📺"}
+  },
+  -- Web Apps
+  {
+    rule_any = {class="Google-chrome", instance = { "www.netflix.com__browse"} },
+    properties = { tag = "📺"}
+  },
+  {
+    rule_any = {class="Google-chrome", instance = { "www.primevideo.com"} },
+    properties = { tag = "📺"}
+  },
+  {
+    -- Disney+ (install specific, see desktop/.local/share/applications)
+    rule_any = {class="Google-chrome", instance = { "crx_agimnkijcaahngcdmfeangaknmldooml" } },
+    properties = { tag = "📺"}
   },
   -- floating clients
   {
