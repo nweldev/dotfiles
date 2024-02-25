@@ -1,0 +1,6 @@
+[Added Associations]
+text/css=code_code.desktop;
+font/ttf=code_code.desktop;
+
+[Default Applications]
+inode/directory=org.gnome.Nautilus.desktop;
