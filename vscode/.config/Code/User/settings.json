@@ -31,6 +31,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
+    
+
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.tabCompletion": "on",
@@ -109,7 +111,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "diffEditor.ignoreTrimWhitespace": false,
   "ltex.additionalRules.motherTongue": "fr",
   "cSpell.userWords": [
     "COVID",
@@ -159,15 +160,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "typescript.tsserver.log": "off",
-  "todo-tree.general.tags": [
-    "BUG",
-    "HACK",
-    "FIXME",
-    "TODO",
-    "XXX",
-    "[ ]",
-    "[x]"
-  ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
   "tabnine.experimentalAutoImports": true,
   "[less]": {
@@ -186,5 +178,33 @@
   "java.configuration.runtimes": [],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "npm.keybindingsChangedWarningShown": true
+  "npm.keybindingsChangedWarningShown": true,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.autoDetectColorScheme": true,
+  "window.titleBarStyle": "custom",
+  "todo-tree.general.periodicRefreshInterval": 5,
+  "redhat.telemetry.enabled": false,
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.general.statusBar": "total",
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*/**",
+    "**/.next/**"
+  ],
+  "exclude": "{**/node_modules/**,**/.next/**,**/.nx/**,**/bower_components/**,**/dist/**,**/build/**,**/.vscode/**,**/_output/**,**/vendor/**,**/*.min.*,**/*.map}",
+  "enableTelemetry": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "nxConsole.showNodeVersionOnStartup": false,
+  "tabnine.ignoreCertificateErrors": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": "true",
+    "scminput": false
+  },
+  "markdown.extension.completion.enabled": true
 }
