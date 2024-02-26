@@ -41,75 +41,63 @@ xkb_symbols "basic" {
 
 // Refactoring of OSS French for:
 // 1. French
-// 2. programming (WIP)
+// 2. programming
 // 3. Spanish (Castillan)
-// 4. Catalan & Occitan
+// 4. English phonology
 // 5. Japanese transliteration
-// 6. English phonology (IPA - WIP)
 //
 // Derived from Occitan v0.1 by Thomas Metz
-//
-// Differences from OSS French keyboard (kept from Occitan):
-// - add á, í, ò, ó, ú, Á, Í, Ò, Ó, Ú, ñ, Ñ
-// - change position of æ, ü, î, û, œ, ô, ö, ï, â, ë
-//
-// Differences from Occitan keyboard :
-// - reset AB08 and AB09 to latin (for bullet and "point median")
-// - invert ¯ (macron) and µ to ease japanese transcription
-//
-// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ ³ ¸ │ 1 ̨  │ 2 É │ 3 ˘ │ 4 — │ 5 – │ 6 ‑ │ 7 È │ 8 ™ │ 9 Ç │ 0 À │ ° ≠ │ + ± ┃ ⌫ Retour┃
-// │ ² ¹ │ & ˇ │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = } ┃  arrière┃
-// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ A Á │ Z Æ │ E ¢ │ R Ê │ T Ë │ Y Û │ U Ú │ I Í │ O Ó │ P Ò │ ¨ Œ │ £ Ø ┃Entrée ┃
-// ┃Tab ↹  ┃ a á │ z æ │ e € │ r ê │ t ë │ y û │ u ú │ i í │ o ó │ p ò │ ^ œ │ $ ø ┃   ⏎   ┃
-// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃        ┃ Q Ä │ S „ │ D Â │ F ‚ │ G ¥ │ H Ü │ J Î │ K Ï │ L Ô │ M Ö │ % Ù │ ¯ µ ┃      ┃
-// ┃Maj ⇬   ┃ q ä │ s ß │ d â │ f ‘ │ g ’ │ h ü │ j î │ k ï │ l ô │ m ö │ ù ' │ * ` ┃      ┃
-// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
-// ┃       ┃ > ≥ │ W “ │ X ” │ C ® │ V ← │ B ↑ │ N Ñ │ ? … │ . × │ / ÷ │ § − ┃             ┃
-// ┃Shift ⇧┃ < ≤ │ w « │ x » │ c © │ v → │ b ↓ │ n ñ │ , ¿ │ ; • │ : · │ ! ¡ ┃Shift ⇧      ┃
-// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
-// ┃       ┃       ┃       ┃ ␣         Espace fine insécable ⍽ ┃       ┃       ┃       ┃
-// ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣ Espace       Espace insécable ⍽ ┃AltGr ⇮┃Menu   ┃Ctrl   ┃
-// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛"
 partial alphanumeric_keys
-xkb_symbols "intc" {
+xkb_symbols "frcustom" {
 
     include "fr(oss)"
 
-    name[Group1]= "Internacional AZERTY";
+    name[Group1]= "French (custom)";
 
     // from Occitan
-
-    key <AD01>	{ [                a,                A,               aacute,                Aacute ] }; // a A á Á
-    key <AD02>	{ [                z,                Z,                   ae,                    AE ] }; // z Z æ Æ
-    key <AD05>	{ [                t,                T,           ediaeresis,            Ediaeresis ] }; // t T ë Ë
-    key <AD06>	{ [                y,                Y,          ucircumflex,           Ucircumflex ] }; // y Y û Û
-    key <AD07>	{ [                u,                U,               uacute,                Uacute ] }; // u U ú Ú
-    key <AD08>	{ [                i,                I,               iacute,                Iacute ] }; // i I í Í
-    key <AD09>	{ [                o,                O,               oacute,                Oacute ] }; // o O ó Ó
-    key <AD10>	{ [                p,                P,               ograve,                Ograve ] }; // p P ò Ò
     key <AD11>	{ [  dead_circumflex,   dead_diaeresis,                   oe,                    OE ] }; // ^ ̈ ̃ œ Œ
-
-    key <AC03>	{ [                d,                D,          acircumflex,           Acircumflex ] }; // d D â Â
-    key <AC06>	{ [                h,                H,           udiaeresis,            Udiaeresis ] }; // h H ü Ü
-    key <AC07>	{ [                j,                J,          icircumflex,           Icircumflex ] }; // j J î Î
-    key <AC08>	{ [                k,                K,           idiaeresis,            Idiaeresis ] }; // k K ï Ï
-    key <AC09>	{ [                l,                L,          ocircumflex,           Ocircumflex ] }; // l L ô Ô
-
     key <AB04>  { [                v,                V,           rightarrow,             leftarrow ] }; // v V → ←
     key <AB06>  { [                n,                N,               ntilde,                Ntilde ] }; // n N ñ Ñ
 
-    // reset to latin (basic)
-
+    // reset to basic
     key <AB08>	{ [        semicolon,           period,                 U2022,             multiply ] }; // • (bullet) 
     key <AB09>	{ [            colon,            slash,        periodcentered,             division ] }; // · (point median)
 
-    // custom
+    // reset to latin
+    key <AC02>  { [  0x1000073,  0x1000053,  0x10000DF,  0x1001E9E  ]  }; // s S ß ẞ
+    key <AC03>  { [  0x1000064,  0x1000044,  0x10000F0,  0x10000D0  ]  }; // d D ð ð
 
-    // modified "French (alt.)"
-    key <BKSL>	{ [         asterisk,      dead_macron,            dead_grave,                   mu ] };
+    // custom
+    key <LSGT>  { [  0x100003C,  0x100003E,  0x10002D0,  0x10002D1  ]  }; // < > ː ˑ
+    key <AB03>  { [  0x1000063,  0x1000043,  0x1000283,  0x10002A7  ]  }; // c C ʃ ʧ
+    key <AC01>  { [  0x1000071,  0x1000051,  0x10000F8,  0x10000D8  ]  }; // q Q ø Ø
+    key <AC06>  { [  0x1000068,  0x1000048,  0x1000265,  0x10002B0  ]  }; // h H ɥ ʰ
+    key <AC07>  { [  0x100006A,  0x100004A,  0x1000292,  0x10002A4  ]  }; // j J ʒ ʤ
+    key <AC08>  { [  0x100006B,  0x100004B,  0x10002C8,  0x10025CC  ]  }; // k K ˈ ◌
+    key <AC09>  { [  0x100006C,  0x100004C,  0x100028E,  0x1000281  ]  }; // l L ʎ ʁ
+    key <AC10>  { [  0x100006D,  0x100004D,  0x100026F,  0x1000270  ]  }; // m M ɯ ɰ
+    key <BKSL>  { [  0x100002A,  0x1000304,  0x1000300,  0x10000B5  ]  }; // * ̄ ◌̀ µ
+    key <AD02>  { [  0x100007A,  0x100005A,  0x1000292,  0x1000291  ]  }; // z Z ʒ ʑ
+    key <AD03>  { [  0x1000065,  0x1000045,  0x1000259,  0x100025A  ]  }; // e E ə ɚ
+    key <AD04>  { [  0x1000072,  0x1000052,  0x1000279,  0x100027E  ]  }; // r R ɹ ɾ
+    key <AD05>  { [  0x1000074,  0x1000054,  0x1000275,  0x1000361  ]  }; // t T ɵ ◌͡
+    key <AD07>  { [  0x1000075,  0x1000055,  0x100028C,  0x100028A  ]  }; // u U ʌ ʊ
+    key <AD09>  { [  0x100006F,  0x100004F,  0x1000252,  0x1000254  ]  }; // o O ɒ ɔ
+    key <AD10>  { [  0x1000070,  0x1000050,  0x1000278,  0x1000294  ]  }; // p P ɸ ʔ
+    key <AD12>  { [  0x10020AC,  0x10000A2,  0x1000024,  0x10000A3  ]  }; // € ¢ $ £
+    key <AE01>  { [  0x1000026,  0x1000031,  0x1000306,  0x100032F  ]  }; // & 1 ◌̆  ◌̯
+    key <AE03>  { [  0x1000022,  0x1000033,  0x1000023,  0x100025B  ]  }; // " 3 # ɛ
+
+    // based on latin
+    key <AC05>  { [  0x1000067,  0x1000047,  0x100014B,  0x1000272  ]  }; // g G ŋ ɲ
+    key <AD01>  { [  0x1000061,  0x1000041,  0x10000E6,  0x1000251  ]  }; // a A æ ɑ
+    key <AD06>  { [  0x1000079,  0x1000059,  0x100029D,  0x10000A5  ]  }; // y Y ʝ ¥
+    key <AD08>  { [  0x1000069,  0x1000049,  0x100026A,  0x1000131  ]  }; // i I ɪ ı
+    key <AE11>  { [  0x1000029,  0x10000B0,  0x100005B,  0x1001D4A  ]  }; // ) ° [ ᵊ
+
+    // based on oss
+    key <AE02>  { [  0x10000E9,  0x1000032,  0x1000303,  0x10000C9  ]  }; // é 2 ◌̃ É
+    key <AE09>  { [  0x10000E7,  0x1000039,  0x1000255,  0x10000C7  ]  }; // ç 9 ɕ Ç
 };
 
 partial alphanumeric_keys

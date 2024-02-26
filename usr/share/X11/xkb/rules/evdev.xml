@@ -3601,8 +3601,8 @@
         <!-- CUSTOM VARIANT -->
         <variant>
           <configItem>
-            <name>intc</name>
-            <description>Internacional AZERTY</description>
+            <name>frcustom</name>
+            <description>French (custom)</description>
             <languageList>
               <iso639Id>oci</iso639Id>
             </languageList>
